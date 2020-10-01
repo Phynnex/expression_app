@@ -3,7 +3,7 @@ import { RoomsCard } from "../Components/RoomsCard";
 import roomsdata from "../Assets/rooms.json";
 import "../Styles/Rooms.css";
 
-export default function Rooms() {
+const Rooms = () => {
   return (
     <>
       <section className="cards-container">
@@ -13,4 +13,5 @@ export default function Rooms() {
       </section>
     </>
   );
-}
+};
+export default Rooms;

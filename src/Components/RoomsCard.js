@@ -7,9 +7,8 @@ export function RoomsCard({ title, img }) {
       <div className="cardcontainer">
         <div className="property-card">
           <a href="/">
-            <div className="property-image" image={img}>
-              {img}
-              {/* <div className="property-image-title" image={img}>{img}</div> */}
+            <div className="property-image">
+              <img src={img} alt="roomsbanner" />
             </div>
           </a>
           <div className="property-description">

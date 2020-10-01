@@ -13,7 +13,7 @@ export default function Home() {
       <section className="home">
         <section className="hometext">
           <Slide right>
-            <p>Dont keep all your feelings sheltered, Express them</p>
+            <p>Dont keep all your feelings sheltered-Express them,</p>
           </Slide>
           <Slide left>
             <p>Dont ever let life shut you up</p>
@@ -30,6 +30,20 @@ export default function Home() {
         </section>
       </section>
       <section className="abouttext">
+        <div classname="rulesicons">
+          <span className="fa fa-comment" aria-hidden="true">
+            No offensive content
+          </span>
+          <span className="fa fa-copyright" aria-hidden="true">
+            No spreading of copyrighted
+          </span>
+          <span className="fa fa-telegram" aria-hidden="true">
+            No advertising
+          </span>
+          <span className="fa fa-like" aria-hidden="true">
+            Be Nice
+          </span>
+        </div>
         <Bounce left>
           <h1 className="aboutheader">About</h1>
         </Bounce>
@@ -51,14 +65,7 @@ export default function Home() {
         </Zoom>
       </section>
       <section className="forumrules">
-        <div classname="rulesicons">
-          <span className="fa fa-thumbs-up" aria-hidden="true">
-            Like
-          </span>
-          <span className="fa fa-thumbs-up" aria-hidden="true">
-            Like
-          </span>
-        </div>
+        {/* <h1 className="forumrulesheader">Forum Rules</h1> */}
       </section>
       <footer className="footer">
         <p className="footertext">copyright 2020 Expression</p>
