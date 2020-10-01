@@ -1,0 +1,5 @@
+.cards-container {
+  display: flex;
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+}

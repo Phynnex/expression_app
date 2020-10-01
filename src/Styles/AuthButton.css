@@ -1,0 +1,24 @@
+.authbtn {
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background-color: #9C27B0;
+  font-weight: bolder;
+  color: #f1f1f1;
+  margin-right: 12px;
+}
+
+.authbtn:hover {
+  background-color: lavender;
+  color: #9C27B0;
+  transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+
+  
+
