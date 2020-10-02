@@ -30,20 +30,6 @@ export default function Home() {
         </section>
       </section>
       <section className="abouttext">
-        <div classname="rulesicons">
-          <span className="fa fa-comment" aria-hidden="true">
-            No offensive content
-          </span>
-          <span className="fa fa-copyright" aria-hidden="true">
-            No spreading of copyrighted
-          </span>
-          <span className="fa fa-telegram" aria-hidden="true">
-            No advertising
-          </span>
-          <span className="fa fa-like" aria-hidden="true">
-            Be Nice
-          </span>
-        </div>
         <Bounce left>
           <h1 className="aboutheader">About</h1>
         </Bounce>
@@ -64,9 +50,7 @@ export default function Home() {
           </p>
         </Zoom>
       </section>
-      <section className="forumrules">
-        {/* <h1 className="forumrulesheader">Forum Rules</h1> */}
-      </section>
+      
       <footer className="footer">
         <p className="footertext">copyright 2020 Expression</p>
       </footer>

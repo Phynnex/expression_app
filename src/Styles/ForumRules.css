@@ -1,0 +1,20 @@
+.forumrules{
+  background-color: red;
+  height: 50vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  margin: 16px;
+  background-color: grey;
+  width: 65px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}

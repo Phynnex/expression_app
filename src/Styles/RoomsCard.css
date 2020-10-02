@@ -20,11 +20,14 @@
 
 .cardcontainer
 {
-  height:100vh;
   width:100%;
   display: flex;
-  justify-content: flex-start;
-  margin: 50px;
+  justify-content: space-evenly;
+  justify-items: center;
+  /* margin-right: 40px; */
+  margin-left: 30px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 /* End Non-Essential  */
@@ -38,6 +41,9 @@
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   border-radius:16px;
   overflow:hidden;
+  margin-bottom: -50px;
+ 
+  
 
 }
 /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
@@ -51,10 +57,8 @@
   padding:1em 2em;
   position:Absolute;
   top:0px;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-image:url();
+  background-image: url('https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616__340.jpg'); 
   background-size:cover;
   background-repeat:no-repeat;
 }
@@ -68,26 +72,43 @@
   width:14em;
   position:absolute;
   bottom:0em;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
   padding: 0.5em 1em;
   text-align:center;
 }
 
-/* Social Icons */
+
 
 .property-social-icons
 {
-  width:1em;
-  height:1em;
-  background-color:black;
+  display: flex;
+  justify-content: center;
   position:absolute;
   bottom:1em;
   left:1em;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.join{
+  position: relative;
+  left: 3em;
+  top: 1em;
+  margin-top: 10px;
+  width: 100px;
+  height: 25px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background-color: #9C27B0;
+  font-weight: bolder;
+  color: #f1f1f1;
+}
+
+.join:hover {
+  background-color: lavender;
+  color: #9C27B0;
 }
 
 /* Property Cards Hover States */
@@ -102,17 +123,14 @@
   height:18em;
 }
 
-.property-card:hover .property-social-icons
-{
-  background-color:white;
-}
 
 .property-card:hover .property-social-icons:hover
 {
-  background-color:blue;
   cursor:pointer;
 }
 
+/* 
+ */
 
 /* Optional
 

@@ -1,5 +1,46 @@
+
+/* body{
+ background: radial-gradient(#e5e5e5, #ffffff, #e5e5e5);
+ background: cover;
+ background-repeat: no-repeat;
+} */
+.roomscontainer{
+  /* background-color: red; */
+  margin-top: -40px;
+  background-color: lavender;
+}
 .cards-container {
   display: flex;
   flex-flow: row wrap;
   flex-wrap: wrap;
+  
+}
+.roomsheader{
+  font-size: 6rem;
+  font-weight: bolder;
+  text-align: center;
+  margin: 30px;
+  padding-top: 50px;
+  
+}
+
+.roomspara{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 2.5rem;
+
+}
+
+@media screen and (max-width: 960px){
+  .roomsheader{
+    font-size: 2.5rem;
+  }
+
+  .roomspara{
+    font-size: 1.5rem;
+  }
+  .cards-container{
+    display: flex;
+    justify-content: center;
+  }
 }

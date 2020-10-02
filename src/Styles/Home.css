@@ -73,16 +73,35 @@
 
 .forumrules{
   background-color: red;
-  width: 100%;
+  height: 50vh;
 }
-.rulesicons {
-  display: block;
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  margin: 16px;
+  background-color: grey;
+  width: 65px;
 }
-/* .footer{
-  position: sticky;
-  z-index: 1;
-  bottom: 0;
+
+.icon {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+
+/* .rulesicons {
+ display: flex;
+}
+
+.rulesicons .fa{
+  justify-content: space-evenly;
 } */
+  
+
 
 .footertext{
   display: flex;
