@@ -1,11 +1,12 @@
 import React from "react";
-import { ForumRules } from "../Components/ForumRules";
+import Carousel from "../Components/Carousel";
+
 
 const Profile = () => {
   return (
     <>
-      <h1 className="profile">Profile Page</h1>
-      <ForumRules />
+      {/* <h1 className="profile">Profile Page</h1> */}
+      <Carousel />
     </>
   );
 };

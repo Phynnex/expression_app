@@ -1,0 +1,44 @@
+.countercontainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: #b399d4;
+  justify-content: space-evenly;
+  font-family: 'Lato', sans-serif;
+}
+
+.counterwrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  margin: 16px;
+  /* background-color: grey; */
+  width: 20%;
+}
+
+.fasicons{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #333333;
+}
+
+.countertext{
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.counternumbers{
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+  
+  .counterwrapper {
+    width: 40%;
+  }
+}

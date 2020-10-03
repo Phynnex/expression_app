@@ -289,7 +289,7 @@ export default function AuthPage() {
         </div>
       </section>
       <footer className="footer">
-        <p className="footertext">copyright 2020 Expression</p>
+        <p className="footertext">&copy;Copyright 2020 Expression</p>
       </footer>
     </>
   );

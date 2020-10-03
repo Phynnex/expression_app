@@ -2,8 +2,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Balsamiq Sans', cursive;
+  
+ 
 }
+
+.clear{
+  clear: both;
+}
+
 
 .home {
   display: flex;
@@ -17,6 +23,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
+  font-family: 'Lato', sans-serif;
 }
 
 .hometext{
@@ -25,10 +32,15 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .hometext h1{
-   font-size: 3rem;
+   font-size: 2.5rem;
+   font-weight: 700;
+   line-height: 2.75rem;
+   font-style: normal;
+   color: #ffffff;
 }
 
 .readmorebtn {
@@ -56,58 +68,12 @@
   margin-top: 30px;
 }
 
-
-.aboutheader{
-  text-align: center;
-  font-size: xx-large;
-  margin-top: 40px;
-}
-
-.aboutpara{
-  text-align: center;
-  margin-top:20px;
-  margin-right: 50px;
-  margin-bottom: 30px;
-  margin-left: 50px;
-}
-
-.forumrules{
-  background-color: red;
-  height: 50vh;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 8px;
-  margin: 16px;
-  background-color: grey;
-  width: 65px;
-}
-
-.icon {
-  display: flex;
-  align-items: center;
-  padding: 4px;
-}
-
-
-/* .rulesicons {
- display: flex;
-}
-
-.rulesicons .fa{
-  justify-content: space-evenly;
-} */
-  
-
-
 .footertext{
   display: flex;
   justify-content: center;
   background-color: #0a0a0a;
   color: #9c27b0;
+  font-family: 'Lato', sans-serif;
 }
 
 @media screen and (max-width: 960px) {

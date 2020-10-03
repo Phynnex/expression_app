@@ -1,0 +1,55 @@
+
+.abouttextandimagecontainer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.aboutimage{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://mentalhealthchat.org/welcome/wp-content/uploads/2020/07/home-banner-1.svg);
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  height: 60vh;
+}
+
+.abouttextcontainer{
+  background-color: lavender;
+  height: 60vh;
+}
+
+.flexitems{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.aboutheader{
+  text-align: center;
+  font-size: 4.5rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 2.2rem;
+  color: #4f4f4f;
+  margin-top: 40px;
+
+}
+
+.aboutpara{
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #4f4f4f;
+  text-align: center;
+  margin-top:20px;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+}
+
+
+
