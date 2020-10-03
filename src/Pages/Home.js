@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Login } from "../Components/Login";
-import { SignUp } from "../Components/SignUp";
 import "../Styles/Home.css";
 import Slide from "react-reveal/Slide";
 
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <section className="home">
@@ -20,15 +18,13 @@ export default function Home() {
           <Link to="/about">
             <button className="readmorebtn">Read More</button>
           </Link>
-          <Link to="/authpage">
-            <section className="homeauthbtn">
-              <Login />
-              <SignUp />
-            </section>
-          </Link>
         </section>
       </section>
-      
+      <footer className="footer">
+        <p className="footertext">&copy;Copyright 2020 Expression</p>
+      </footer>
     </>
   );
-}
+};
+
+export default Home;

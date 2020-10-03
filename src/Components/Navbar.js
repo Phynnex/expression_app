@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Login from "../Components/Login";
 import "../Styles/Navbar.css";
 import Dropdown from "./Dropdown";
 
-function Navbar() {
+const Navbar = () => {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
@@ -50,7 +51,9 @@ function Navbar() {
             <Link to="/rooms" className="nav-links" onClick={closeMobileMenu}>
               Rooms
             </Link>
+            <Login />
           </li>
+
           <li
             className="nav-item"
             onMouseEnter={onMouseEnter}
@@ -88,6 +91,6 @@ function Navbar() {
       </nav>
     </>
   );
-}
+};
 
 export default Navbar;

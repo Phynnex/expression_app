@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/AuthPage.css";
 
+
 export default function AuthPage() {
   return (
     <>
