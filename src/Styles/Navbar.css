@@ -9,6 +9,7 @@
   top: 0;
   z-index: 1;
   
+  
 }
 
 .navbar-logo {
@@ -154,7 +155,7 @@
 
   }
 
-  button {
+  button{
     display: none;
   }
 

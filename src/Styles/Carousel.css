@@ -3,6 +3,10 @@ body {
   padding:0;
   font-family: 'Lato', sans-serif;
 }
+
+.clear{
+  clear: both;
+}
 .container{
   position:relative;
    overflow:hidden;

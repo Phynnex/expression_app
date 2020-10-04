@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fefefe;
+  font-family: 'Lato', sans-serif;
+}
+
+/* .singlepagecontainer{
+  display: flex;
+  justify-content: center;
+} */
+
+.singlepagecardcontainer {
+  width: 300%;
+  height:100%;
+  margin: 50px 150px;
+  
+}
+
+.singlepagecard {
+  width: 20%;
+  background: #fff;
+  border: 1px solid grey;
+  margin-bottom: 50px;
+  transition: 0.3s;
+  border-radius:4px;
+}
+
+.singlepagecard-header {
+  text-align: center;
+  padding: 50px 10px; background:url(https://img.freepik.com/free-photo/dark-blue-glow-dust-particle-abstract-background_35672-1414.jpg?size=626&ext=jpg);
+  background-size:cover;
+  background-position:center;
+  color: #fff;
+  border-radius:4px;
+  height:50vh;
+  
+}
+
+.singlepagecardpara {
+  padding: 10px; 
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.singlepagecardheader{
+  padding: 10px;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.singlepagecard .btn {
+  display: block;
+  color: #fff;
+  text-align: center;
+  background: #9C27B0;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-bottom:10px;
+  text-decoration: none;
+  padding: 10px 5px;
+  border-radius:4px;
+  width: 150px;
+}
+
+.postbox {
+  margin-top: -20px;
+  margin-left: 150px;
+ 
+}
+
+.postboxinput input{
+  height: 15vh;
+  width: 67.5%;
+  border: 1px solid gray;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  padding-left: 10px;
+  padding-bottom: 30px;
+}
+
+
+
+
+  
+
+
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .container {
+    width: 100%;
+  }
+
+  .heading {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .card {
+    width: 80%;
+  }
+}

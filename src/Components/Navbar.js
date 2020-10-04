@@ -51,7 +51,9 @@ const Navbar = () => {
             <Link to="/rooms" className="nav-links" onClick={closeMobileMenu}>
               Rooms
             </Link>
-            <Login />
+            <div className="loginbutton">
+              <Login />
+            </div>
           </li>
 
           <li
@@ -59,7 +61,19 @@ const Navbar = () => {
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >
-            <Link to="/profile" className="nav-links" onClick={closeMobileMenu}>
+            <Link
+
+
+                                        to="/singlepage"
+             
+             
+              className="nav-links"
+             
+             
+              onClick={closeMobileMenu}
+            
+            
+            >
               <span
                 className="fa fa-user 4x"
                 aria-hidden="true"

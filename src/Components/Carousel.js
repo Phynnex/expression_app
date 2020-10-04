@@ -40,6 +40,7 @@ const Carousel = () => {
           </div>
         </div>
       </div>
+      <div className="clear"></div>
     </>
   );
 };

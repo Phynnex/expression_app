@@ -129,6 +129,11 @@
   cursor:pointer;
 }
 
+@media (max-width: 922px){
+ .join{
+   display: inline;
+ }
+}
 /* 
  */
 

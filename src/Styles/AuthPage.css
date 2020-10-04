@@ -450,7 +450,8 @@ a.bottom-text-w3ls {
     }
 }
 
-@media(max-width: 900px) {
+@media(max-width: 900px) 
+{
     .sub-main-w3 {
         max-width: 768px;
     }

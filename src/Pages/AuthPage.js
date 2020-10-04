@@ -88,17 +88,17 @@ export default function AuthPage() {
                           required
                         />
                       </div>
-                      <button
-                        type="submit"
-                        className="btn submit"
-                        style={{
-                          outline: "none",
-                          cursor: "inherit",
-                          borderRadius: "4px",
-                        }}
-                      >
-                        Login
-                      </button>
+                        <button
+                          type="submit"
+                          className="btn submit"
+                          style={{
+                            outline: "none",
+                            cursor: "inherit",
+                            borderRadius: "4px",
+                          }}
+                        >
+                          Login
+                        </button>
                       <a
                         href="/"
                         className="bottom-text-w3ls editContent"

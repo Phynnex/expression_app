@@ -2,9 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
- 
 }
+
 
 .clear{
   clear: both;
@@ -24,6 +23,7 @@
   background-repeat: no-repeat;
   color: #fff;
   font-family: 'Lato', sans-serif;
+  
 }
 
 .hometext{
@@ -62,11 +62,11 @@
   color: #9C27B0;
 }
 
-.homeauthbtn {
+/* .homeauthbtn {
   display: flex !important;
   justify-content: center !important;
   margin-top: 30px;
-}
+} */
 
 .footertext{
   display: flex;
@@ -79,5 +79,6 @@
 @media screen and (max-width: 960px) {
   .home{
     width: 105%;
+    font-size: 1.5;
   }
 }
