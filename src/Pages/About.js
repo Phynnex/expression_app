@@ -10,8 +10,9 @@ export default function About() {
   return (
     <>
       <Carousel />
+      {/* <section className="clear"></section> */}
       <section className="abouttextandimagecontainer">
-        <section className="flexitems abouttextcontainer">
+        <section className="abouttextcontainer">
           <section className="abouttext">
             <Bounce left>
               <h1 className="aboutheader">About</h1>
@@ -25,17 +26,13 @@ export default function About() {
                 libero justo laoreet. Orci sagittis eu volutpat odio facilisis.
                 Turpis massa tincidunt dui ut ornare. Elementum pulvinar etiam
                 non quam lacus suspendisse faucibus interdum. Lorem ipsum dolor
-                sit amet consectetur. Nam libero justo laoreet sit amet cursus
-                sit amet. Sed tempus urna et pharetra pharetra. Orci porta non
-                pulvinar neque laoreet suspendisse interdum. Felis eget velit
-                aliquet sagittis id consectetur purus ut faucibus. Tincidunt id
-                aliquet risus feugiat in ante metus dictum at.
+                sit amet consectetur.
               </p>
             </Zoom>
           </section>
         </section>
       </section>
-      <section className="flexitems aboutimage"></section>
+      <section className="aboutimage"></section>
       <section className="clear"></section>
       <section className="countercomponent">
         <Counter />

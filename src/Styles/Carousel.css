@@ -47,14 +47,14 @@ body {
   line-height: 2.7rem;
   transition:0.5s;
 }
-.container .slider .slide .caption p{
+/* .container .slider .slide .caption p{
   margin:0;
   padding:0;
   text-align: center;
   color:#fff;
   font-size:18px;
   transition:0.5s;
-}
+} */
 .container .slider .slide.slide1{
   background:url(https://img.freepik.com/free-photo/dark-blue-glow-dust-particle-abstract-background_35672-1414.jpg?size=626&ext=jpg);
   background-size:cover;
@@ -129,11 +129,14 @@ body {
     padding:20px;
   }
   .container .slider .slide .caption h2{
-    margin:0 0 10px;
-    font-size:30px;
+    margin:0px 0 0px;
+    font-size:2rem;
   }
-  .container .slider .slide .caption p{
-    
-    font-size:1.5rem;
-  } 
+}
+
+@media (max-width: 1200px){
+  .container .slider .slide .caption h2{
+    margin: 0 0 0px;
+  }
+ 
 }

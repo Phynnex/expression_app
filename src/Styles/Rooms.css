@@ -1,13 +1,9 @@
-
-/* body{
- background: radial-gradient(#e5e5e5, #ffffff, #e5e5e5);
- background: cover;
- background-repeat: no-repeat;
-} */
 .roomscontainer{
-  /* background-color: red; */
   margin-top: -40px;
   background-color: lavender;
+  height: 90%;
+  padding-top: -10px;
+  
 }
 .cards-container {
   display: flex;

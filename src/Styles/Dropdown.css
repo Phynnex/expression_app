@@ -38,3 +38,9 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 1400px) {
+  .fa-caret-down {
+    display: none;
+  }
+}

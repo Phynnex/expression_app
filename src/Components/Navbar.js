@@ -62,17 +62,9 @@ const Navbar = () => {
             onMouseLeave={onMouseLeave}
           >
             <Link
-
-
-                                        to="/singlepage"
-             
-             
+              to="/singlepage"
               className="nav-links"
-             
-             
               onClick={closeMobileMenu}
-            
-            
             >
               <span
                 className="fa fa-user 4x"

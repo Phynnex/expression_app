@@ -24,7 +24,6 @@
   display: flex;
   justify-content: space-evenly;
   justify-items: center;
-  /* margin-right: 40px; */
   margin-left: 30px;
   margin-top: 80px;
   margin-bottom: 80px;
@@ -133,26 +132,14 @@
  .join{
    display: inline;
  }
-}
-/* 
- */
 
-/* Optional
-
-.property-image-title
-{
-text-align:center;
-position:Relative;
-top:30%;
-opacity:0;
-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
-color:black;
-font-size:1.2em;
+ .cardcontainer{
+  display: flex;
+  justify-content: space-evenly;
+  justify-items: center;
+ }
 }
 
-.property-card:hover .property-image-title
-{
-opacity:1;
-}
+@media (max-width: 922px){
 
-*/
+}

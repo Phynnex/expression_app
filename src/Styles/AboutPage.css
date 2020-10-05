@@ -1,4 +1,6 @@
-
+/* .clear{
+  clear: both;
+} */
 .aboutimage{
   background:  url(https://mentalhealthchat.org/welcome/wp-content/uploads/2020/07/home-banner-1.svg);
   /* background-attachment: fixed; */
@@ -37,11 +39,29 @@
   line-height: 1.5rem;
   color: #4f4f4f;
   text-align: center;
+  /* padding-top: 20px;
+  letter-spacing: 1px; */
   margin-top:20px;
   margin-right: 50px;
   margin-bottom: 30px;
   margin-left: 50px;
 }
 
+@media screen and (max-width: 960px) {
+  .aboutimage{
+   display:none;
+  }
+
+  .abouttextcontainer{
+    width: 100%;
+    height:auto;
+  }
+}
+
+/* @media screen and (max-width: 600px) {
+  .aboutpara{
+    padding:
+  }
+} */
 
 

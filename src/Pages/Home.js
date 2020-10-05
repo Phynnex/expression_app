@@ -20,9 +20,9 @@ const Home = () => {
           </Link>
         </section>
       </section>
-      <footer className="footer">
+      <section className="footer">
         <p className="footertext">&copy;Copyright 2020 Expression</p>
-      </footer>
+      </section>
     </>
   );
 };

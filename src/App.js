@@ -5,7 +5,7 @@ import Home from "../src/Pages/Home";
 import About from "../src/Pages/About";
 import AuthPage from "../src/Pages/AuthPage";
 import Rooms from "../src/Pages/Rooms";
-import SinglePage from "../src/Pages/singlepage";
+import SinglePage from "../src/Pages/SinglePage";
 import Navbar from "./Components/Navbar";
 
 function App() {
