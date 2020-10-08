@@ -47,7 +47,7 @@ const ForumRules = () => {
             <div className="icons">
               <i className="faicons fas fa-gavel"></i>
             </div>
-            <div className="rulestext">Admin Descion Is Final</div>
+            <div className="rulestext">Admin Decision Is Final</div>
           </div>
         </section>
       </section>
