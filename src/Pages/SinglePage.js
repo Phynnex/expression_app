@@ -1,9 +1,11 @@
 import React from "react";
 import "../Styles/SinglePage.css";
+import Navbar from "../Components/Navbar";
 
 const SinglePage = () => {
   return (
     <>
+      <Navbar />
       <section className="singlepagecontainer">
         <div>
           <div className="singlepagecardcontainer">

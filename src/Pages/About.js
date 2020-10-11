@@ -5,10 +5,12 @@ import Counter from "../Components/Counter";
 import ForumRules from "../Components/ForumRules";
 import Carousel from "../Components/Carousel";
 import "../Styles/AboutPage.css";
+import Navbar from "../Components/Navbar";
 
 export default function About() {
   return (
     <>
+      <Navbar />
       <Carousel />
       {/* <section className="clear"></section> */}
       <section className="abouttextandimagecontainer">

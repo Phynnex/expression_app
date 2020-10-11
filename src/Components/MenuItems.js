@@ -1,7 +1,7 @@
 export const MenuItems = [
   {
     title: "My Profile",
-    path: "/profile",
+    path: "/admindashboard",
     cName: "dropdown-link",
   },
   {

@@ -1,14 +1,13 @@
 import React, {useState} from "react";
-import axios from "axios";
 import "../Styles/AuthPage.css";
+import Navbar from "../Components/Navbar";
 
 
 export default function AuthPage() {
 
-  const [values,setValues] = useState({
+  const[values,setValues] = useState({
     email:'',
-    password:'',
-    password2:''
+    password:''
   });
 
   const handleChange = e => {
@@ -23,30 +22,48 @@ export default function AuthPage() {
   const handleSubmitSignUp = (e) => {
     e.preventDefault();
     console.log(values);
-    axios
-    .post("https://expressio-api.herokuapp.com/api/users", values)
-    .then((response) => {
-      console.log(response);
+    console.log(JSON.stringify(values));
+    fetch("https://expressio-api.herokuapp.com/api/users", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({ user: values}),
+    redirect: "follow",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("success:", data);
     })
     .catch((error) => {
-      console.log(error);
+      console.error("Error:", error);
     });
   };
 
   const handleSubmitLogin = (e) => {
     e.preventDefault();
     console.log(values);
-    // axios
-    // .post("https://expressio-api.herokuapp.com/api/users", values)
-    // .then((response) => {
-    //   console.log(response);
-    // })
-    // .catch((error) => {
-    //   console.log(error);
-    // });
+    console.log(JSON.stringify(values));
+    fetch("https://expressio-api.herokuapp.com/api/users/login", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({user: values}),
+    redirect: "follow",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("success:",data);
+
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
   };
   return (
     <>
+      <Navbar />
       <section>
         <div id="page" className="page">
           <div
@@ -87,7 +104,7 @@ export default function AuthPage() {
                   </label>
                   <article>
                     <form
-                    onSubmit={handleSubmitLogin}
+                      onSubmit={handleSubmitLogin}
                       action="#"
                       method="post"
                       className="editContent"
@@ -131,19 +148,21 @@ export default function AuthPage() {
                           placeholder="Password"
                           name="password"
                           required
+                          value={values.password}
+                          onChange={handleChange}
                         />
                       </div>
-                        <button
-                          type="submit"
-                          className="btn submit"
-                          style={{
-                            outline: "none",
-                            cursor: "inherit",
-                            borderRadius: "4px",
-                          }}
-                        >
-                          Login
-                        </button>
+                      <button
+                        type="submit"
+                        className="btn submit"
+                        style={{
+                          outline: "none",
+                          cursor: "inherit",
+                          borderRadius: "4px",
+                        }}
+                      >
+                        Login
+                      </button>
                       <a
                         href="/"
                         className="bottom-text-w3ls editContent"
@@ -231,9 +250,9 @@ export default function AuthPage() {
                         <input
                           type="password"
                           placeholder="Confirm Password"
-                          name="password2"
+                          name="password"
                           required
-                          value={values.password2}
+                          value={values.password}
                           onChange={handleChange}
                         />
                       </div>

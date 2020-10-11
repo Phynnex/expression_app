@@ -2,11 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/Home.css";
 import Slide from "react-reveal/Slide";
+import Navbar from "../Components/Navbar";
 
 
 const Home = () => {
   return (
     <>
+      <Navbar />
       <section className="home">
         <section className="hometext">
           <Slide right>

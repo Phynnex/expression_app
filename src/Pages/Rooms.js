@@ -2,10 +2,12 @@ import React from "react";
 import { RoomsCard } from "../Components/RoomsCard";
 import roomsdata from "../Assets/rooms.json";
 import "../Styles/Rooms.css";
+import Navbar from "../Components/Navbar";
 
 const Rooms = () => {
   return (
     <>
+      <Navbar />
       <section className="roomscontainer">
         <h2 className="roomsheader">Expression</h2>
         <p className="roomspara">

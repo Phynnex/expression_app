@@ -1,0 +1,53 @@
+header {
+  font-size: 2rem;
+  background-color: #f1f1f1;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+header ul li {
+  cursor: pointer;
+  padding: 0.5rem;  
+}
+
+header ul li:hover {
+  background-color: blueviolet;
+  color: white;
+  border-radius: 4px;
+}
+
+.dashboardcardcontainer{
+  width: 250px;
+  height: 300px;
+  color: red;
+}
+
+.logo-header{
+  height:50px;
+  background-color: black;
+  color: white;
+}
+
+.logo-text{
+  margin-left: 20px;
+}
+
+@media all and (max-width: 600px) {
+  header ul {
+    flex-direction: column;
+  }
+
+  header ul li {
+    text-align: center;
+  }
+  .logo-header{
+    height: 100px;
+    
+  }
+}
