@@ -4,6 +4,7 @@ import Login from "../Components/Login";
 import "../Styles/Navbar.css";
 import Dropdown from "./Dropdown";
 
+
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
@@ -51,9 +52,11 @@ const Navbar = () => {
             <Link to="/rooms" className="nav-links" onClick={closeMobileMenu}>
               Rooms
             </Link>
-            <div className="loginbutton">
-              <Login />
-            </div>
+            <Link to="/authpage">
+              <div className="loginbutton">
+                <Login />
+              </div>
+            </Link>
           </li>
 
           <li

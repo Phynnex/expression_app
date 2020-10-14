@@ -9,7 +9,7 @@ export const SidebarData = [
   },
   {
     title: "Activities",
-    path: "/activities",
+    path: "/admindashboard/activities",
     icon: <i className="fas fa-chart-line" />,
     cName: "header-text",
   },

@@ -1,43 +1,57 @@
 import React, {useState} from "react";
 import "../Styles/AuthPage.css";
 import Navbar from "../Components/Navbar";
+import { useContext } from "react";
+import Context from "../Store/context";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useHistory } from "react-router-dom";
+import roomsdata from "../Assets/rooms.json";
 
 
-export default function AuthPage() {
 
-  const[values,setValues] = useState({
-    email:'',
-    password:''
-  });
 
-  const handleChange = e => {
-    const {name , value} = e.target;
-    setValues({
-      ...values,
-      [name]: value
+export default function AuthPage(props) {
+  let history = useHistory();
+  const notify = () => {
+    toast.success("You have been logged In", {
+      position: toast.POSITION.TOP_CENTER,
     });
   };
 
+  const { globalDispatch } = useContext(Context);
+  const [values, setValues] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
 
   const handleSubmitSignUp = (e) => {
     e.preventDefault();
     console.log(values);
     console.log(JSON.stringify(values));
     fetch("https://expressio-api.herokuapp.com/api/users", {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({ user: values}),
-    redirect: "follow",
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("success:", data);
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ user: values }),
+      redirect: "follow",
     })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   const handleSubmitLogin = (e) => {
@@ -45,22 +59,29 @@ export default function AuthPage() {
     console.log(values);
     console.log(JSON.stringify(values));
     fetch("https://expressio-api.herokuapp.com/api/users/login", {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({user: values}),
-    redirect: "follow",
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("success:",data);
-
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ user: values }),
+      redirect: "follow",
     })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+      .then((response) => response.json())
+      .then((data) => {
+        globalDispatch({ type: "LOGIN" });
+        const title = props.match.params.room;
+        const room = roomsdata.find(room => title === room.title);
+        globalDispatch({ type: "ROOM",
+        payload:room });
+        history.push("/singlepagedesign/" + title);
+        notify();
+        console.log("success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
+
   return (
     <>
       <Navbar />

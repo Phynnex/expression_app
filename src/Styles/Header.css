@@ -1,53 +1,86 @@
-header {
-  font-size: 2rem;
-  background-color: #f1f1f1;
+:root {
+  --mainDark: #232528;
+  --mainWhite: #f3f3f3;
+  --lightBlue: #009ffd;
 }
 
-header ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.admin_head {
+  background-color: var(--mainDark);
+  height: 80px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-header ul li {
-  cursor: pointer;
-  padding: 0.5rem;  
+.menu_bars {
+  margin-left: 3rem;
+  font-size: 2rem;
+  background: none;
 }
 
-header ul li:hover {
-  background-color: blueviolet;
-  color: white;
+.header_menu {
+  background-color: var(--mainDark);
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 350ms;
+}
+
+.header_menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+.header-text {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.header-text a {
+  margin: 30px;
+  text-decoration: none;
+  color: var(--mainWhite);
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
   border-radius: 4px;
 }
 
-.dashboardcardcontainer{
-  width: 250px;
-  height: 300px;
-  color: red;
+.header-text a:hover {
+  background-color: var(--lightBlue);
 }
 
-.logo-header{
-  height:50px;
-  background-color: black;
-  color: white;
+.header-menu-items {
+  width: 100%;
 }
 
-.logo-text{
-  margin-left: 20px;
+.headerbar-toggle {
+  background-color: var(--mainDark);
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-@media all and (max-width: 600px) {
-  header ul {
-    flex-direction: column;
-  }
+.span_title {
+  margin-left: 36px;
+}
 
-  header ul li {
-    text-align: center;
-  }
-  .logo-header{
-    height: 100px;
-    
-  }
+.dasboard_content_page {
+  position: relative;
+  right: -250px;
+  width: calc(100% - 250px);
 }

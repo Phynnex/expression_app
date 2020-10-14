@@ -47,14 +47,7 @@ body {
   line-height: 2.7rem;
   transition:0.5s;
 }
-/* .container .slider .slide .caption p{
-  margin:0;
-  padding:0;
-  text-align: center;
-  color:#fff;
-  font-size:18px;
-  transition:0.5s;
-} */
+
 .container .slider .slide.slide1{
   background:url(https://img.freepik.com/free-photo/dark-blue-glow-dust-particle-abstract-background_35672-1414.jpg?size=626&ext=jpg);
   background-size:cover;

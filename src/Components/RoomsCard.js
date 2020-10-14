@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/RoomsCard.css";
 
+
 export function RoomsCard({ title, img, story }) {
   return (
     <div>
@@ -18,7 +19,7 @@ export function RoomsCard({ title, img, story }) {
               {story}
             </p>
           </div>
-          <Link to="/authpage">
+          <Link to={"/authpage/" + title}>
             <div className="property-social-icons">
               <button className="join">Join</button>
             </div>

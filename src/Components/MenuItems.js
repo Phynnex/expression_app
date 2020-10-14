@@ -1,12 +1,12 @@
 export const MenuItems = [
   {
     title: "My Profile",
-    path: "/admindashboard",
+    path: "/",
     cName: "dropdown-link",
   },
   {
     title: "Update Profile",
-    path: "/profile",
+    path: "/",
     cName: "dropdown-link",
   },
   {

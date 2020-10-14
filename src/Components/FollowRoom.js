@@ -4,32 +4,26 @@ import Context from "../Store/context";
 import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 
-
-
-const Login = () => {
+const FollowRoom = () => {
   let history = useHistory();
   const { globalState, globalDispatch } = useContext(Context);
 
   return (
     <div>
-      {globalState.isLoggedIn ? (
+      {globalState.isFollowing ? (
         <button
-          className="authbtn"
+          className="followbtn"
           type="button"
-          onClick={() => globalDispatch({ type: "LOG OUT" })}
+          onClick={() => globalDispatch({ type: "FOLLOW ROOM" })}
         >
-          LOG OUT
+          FOLLOW ROOM
         </button>
       ) : (
-        <button
-          className="authbtn"
-          type="button"
-          onClick={() => history.push("/authpage")}
-        >
-          LOGIN
+        <button className="followbtn" type="button" onClick={history.push()}>
+          FOLLOWING
         </button>
       )}
     </div>
   );
 };
-export default Login;
+export default FollowRoom;
