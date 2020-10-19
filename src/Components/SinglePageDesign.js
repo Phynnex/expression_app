@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../Styles/SinglePageDesign.css";
 import Navbar from "../Components/Navbar";
 import Context from "../Store/context";
 import { useContext } from "react";
-// import { RoomsList } from "../Assets/RoomsList";
+import { RoomsList } from "../Assets/RoomsList";
 
-const SinglePage = () => {
+const SinglePage = (props) => {
   const { globalState } = useContext(Context);
-  // const { globalDispatch } = useContext(Context);
+  console.log(globalState)
+  const { globalDispatch } = useContext(Context);
   
-  // useEffect(() => {
-  //   console.log(match);
-  //   const title = match.params.room;
-  //   const room = RoomsList.find((room) => title === room.title);
-  //   globalDispatch({ type: "ROOM", payload: room });
-  // }, []);
+  useEffect(() => {
+    
+    const title = props.match.params.room;
+    const room = RoomsList.find((room) => title === room.title);
+    globalDispatch({ type: "ROOM", payload: room });
+  }, []);
+
+  
 
   
   // localStorage.setItem("followId", "id");
@@ -37,7 +40,6 @@ const SinglePage = () => {
   // };
 
   return (
-
     <>
       <Navbar />
       <section>

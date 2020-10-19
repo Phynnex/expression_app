@@ -15,6 +15,7 @@ import { toast } from "react-toastify";
 import CheckAuth from "./Components/CheckAuth";
 
 
+
 toast.configure();
 const App = (props) => {
   return (
@@ -27,7 +28,13 @@ const App = (props) => {
           <Route path="/authpage/" exact component={AuthPage} />
           <Route
             path="/singlepagedesign/:room"
-            render={props => (!CheckAuth() ? <AuthPage /> : <SinglePageDesign {...props}/>)}
+            render={(props) =>
+              !CheckAuth() ? (
+                <AuthPage {...props} />
+              ) : (
+                <SinglePageDesign {...props} />
+              )
+            }
           />
           <Route path="/rooms" component={Rooms} />
           <Route path="/" component={AdminDashboard} />

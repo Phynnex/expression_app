@@ -19,7 +19,7 @@ export default function AuthPage(props) {
     });
   };
 
-  const { globalDispatch } = useContext(Context);
+  const { globalDispatch, globalState } = useContext(Context);
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -72,7 +72,9 @@ export default function AuthPage(props) {
         const rooms = [];
         const roomTitle = props.match.params.room;
         const room = RoomsList.find((room) => roomTitle === room.title);
+        console.log("1", globalState);
         globalDispatch({ type: "ROOM", payload: room });
+        console.log("2", globalState);
         // const rooms = [];
         // const roomTitle = props.match.params.room;
         // const roomArray = rooms.filter((r) => r.title === roomTitle);

@@ -3,25 +3,9 @@ import RoomsCard from "../Components/RoomsCard";
 import { RoomsList } from "../Assets/RoomsList";
 import "../Styles/Rooms.css";
 import Navbar from "../Components/Navbar";
-// import decode from "jwt-decode";
-// import { Redirect, Route } from "react-router-dom";
-
 
 
 const Rooms = () => {
-  // const AuthRoute = ({ component: Component, ...rest }) => (
-  //   <Route
-  //     {...rest}
-  //     render={(props) =>
-  //       checkAuth() ? (
-  //         <Component {...props} />
-  //       ) : (
-  //         <Redirect to={{ pathname: "/authpage" }} />
-  //       )
-  //     }
-  //   />
-  // );
-
   const [roomsData, setRoomsData] = useState([]);
 
   useEffect(() => {
