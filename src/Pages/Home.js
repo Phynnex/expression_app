@@ -12,10 +12,10 @@ const Home = () => {
       <section className="home">
         <section className="hometext">
           <Slide right>
-            <p>Dont keep all your feelings sheltered-Express them,</p>
+            <p>Don't keep all your feelings sheltered-Express them,</p>
           </Slide>
           <Slide left>
-            <p>Dont ever let life shut you up</p>
+            <p>Don't ever let life shut you up.</p>
           </Slide>
           <Link to="/about">
             <button className="readmorebtn">Read More</button>

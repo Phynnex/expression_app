@@ -6,7 +6,7 @@ import Context from "../Store/context";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
-import roomsdata from "../Assets/rooms.json";
+import { RoomsList } from "../Assets/RoomsList";
 
 
 
@@ -69,13 +69,21 @@ export default function AuthPage(props) {
       .then((response) => response.json())
       .then((data) => {
         globalDispatch({ type: "LOGIN" });
-        const title = props.match.params.room;
-        const room = roomsdata.find(room => title === room.title);
-        globalDispatch({ type: "ROOM",
-        payload:room });
-        history.push("/singlepagedesign/" + title);
+        const rooms = [];
+        const roomTitle = props.match.params.room;
+        const room = RoomsList.find((room) => roomTitle === room.title);
+        globalDispatch({ type: "ROOM", payload: room });
+        // const rooms = [];
+        // const roomTitle = props.match.params.room;
+        // const roomArray = rooms.filter((r) => r.title === roomTitle);
+        // const room = roomArray.length > 0 ? roomArray[0] : {};
+        // globalDispatch({ type: "ROOM", payload: room });
+        history.push("/singlepagedesign/" + roomTitle);
         notify();
-        console.log("success:", data);
+        console.log(data);
+        const token = data.user.token;
+        console.log(token);
+        localStorage.setItem("token", token);
       })
       .catch((error) => {
         console.error("Error:", error);

@@ -12,7 +12,7 @@ body {
 
 .imagecontainer{
   width: 100%;
-  height: 70vh;
+  height: 50vh;
   /* border: 3px solid purple; */
   /* background-image: url(https://cdn.pixabay.com/photo/2017/01/30/02/20/mental-health-2019924__340.jpg); */
   background-size: cover !important;
@@ -25,8 +25,8 @@ body {
   color: #0c0f1e;
   font-style:normal;
   text-transform: uppercase;
-  margin-top: 5px;
-  margin-left: 10px;
+  margin-top: 15px;
+  margin-left: 20px;
 }
 
 .room-decription{
@@ -35,7 +35,7 @@ body {
   color: #3f3c3c;
   font-style: italic;
   margin-top: 5px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .flex-container{
@@ -56,6 +56,7 @@ font-size: 20px;
 padding-top: 10px;
 padding-left: 10px;
 font-style: italic;
+outline:#9C27B0;
 }
 
 
@@ -69,6 +70,30 @@ font-style: italic;
   padding-top: 10px;
   padding-left: 10px;
   font-style: italic;
+  outline:#9C27B0;
+}
+
+
+.followbtn {
+  width: 14rem;
+  height: 40px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background-color: #9C27B0;
+  font-weight: bolder;
+  color: #f1f1f1;
+  margin-top: 10px;
+  margin-left: 20px;
+  outline: none;
+}
+
+.followbtn:hover {
+  background-color: lavender;
+  border: 1px solid #9C27B0;
+  color: #9C27B0;
 }
 
 .postbtn{
@@ -84,6 +109,7 @@ font-style: italic;
   color: #f1f1f1;
   margin-top: 3px;
   margin-left: 520px;
+  outline: none;
 }
 
 .postbtn:hover {
@@ -92,26 +118,8 @@ font-style: italic;
   color: #9C27B0;
 }
 
-.followbtn {
-  width: 14rem;
-  height: 40px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-  background-color: #9C27B0;
-  font-weight: bolder;
-  color: #f1f1f1;
-  margin-top: 10px;
-  margin-left: 10px;
-}
 
-.followbtn:hover {
-  background-color: lavender;
-  border: 1px solid #9C27B0;
-  color: #9C27B0;
-}
+
 
 .views-posts{
   width: 14rem;
@@ -155,23 +163,31 @@ font-style: italic;
 }
 
 
-@media screen and (max-width:900px){
+@media screen and (max-width:900){
+  .followbtn{
+    display: block;
+    margin-left: 37px;
+  }
+}
+
+
+@media screen and (max-width:768px){
   .room-decription{
     margin-left: 37px;
   }
   
   
-  .flex-container{
+  /* .flex-container{
    flex-direction: column;
-  }
+  } */
   .comment-tittle{
-    width: 80%;
+    width: 95%;
     margin-left: 37px;
   }
 
   .comment-text{
-    width: 80%;
-    margin: 0 auto;
+    width: 95%;
+    margin-left: 37px;
   }
 
   .followbtn{
@@ -181,7 +197,7 @@ font-style: italic;
 
   .postbtn{
     display: block;
-    margin-left: 260px;
+    /* margin-right: 40px; */
   }
 
   .views-posts{
@@ -194,5 +210,9 @@ font-style: italic;
     /* margin-top: 10px!important;
     margin: 0 auto; */
   }
+
+}
+
+@media screen and (max-width:480px){
 
 }

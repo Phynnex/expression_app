@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../Styles/RoomsCard.css";
 
 
-export function RoomsCard({ title, img, story }) {
+function RoomsCard({ title, img, story, match }) {
+ 
   return (
     <div>
       <div className="cardcontainer">
@@ -19,9 +20,13 @@ export function RoomsCard({ title, img, story }) {
               {story}
             </p>
           </div>
-          <Link to={"/authpage/" + title}>
+          <Link to={"/singlepagedesign/" + title}>
             <div className="property-social-icons">
-              <button className="join">Join</button>
+              <button
+                className="join"
+              >
+                Join
+              </button>
             </div>
           </Link>
         </div>
@@ -29,3 +34,4 @@ export function RoomsCard({ title, img, story }) {
     </div>
   );
 }
+export default RoomsCard;

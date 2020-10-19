@@ -12,11 +12,11 @@ import RoomsStatistics from "./Pages/RoomsStatistics";
 import UsersData from "./Pages/UsersData";
 import GlobalStateProvider from "./Store/GlobalStateProvider";
 import { toast } from "react-toastify";
-
+import CheckAuth from "./Components/CheckAuth";
 
 
 toast.configure();
-const App = () => {
+const App = (props) => {
   return (
     <GlobalStateProvider>
       <Router>
@@ -25,16 +25,19 @@ const App = () => {
           <Route path="/about" component={About} />
           <Route path="/authpage/:room" exact component={AuthPage} />
           <Route path="/authpage/" exact component={AuthPage} />
-          <Route path="/singlepagedesign/:room" component={SinglePageDesign} />
+          <Route
+            path="/singlepagedesign/:room"
+            render={props => (!CheckAuth() ? <AuthPage /> : <SinglePageDesign {...props}/>)}
+          />
           <Route path="/rooms" component={Rooms} />
           <Route path="/" component={AdminDashboard} />
           <Route path="/activities" component={Activities} />
           <Route path="/roomsstatistics" component={RoomsStatistics} />
           <Route path="/usersdata" component={UsersData} />
+          {/* <AuthRoute exact path="/authpage" component={AuthPage} /> */}
         </Switch>
       </Router>
     </GlobalStateProvider>
   );
 };
-
 export default App;

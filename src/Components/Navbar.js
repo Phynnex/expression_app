@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import Login from "../Components/Login";
 import "../Styles/Navbar.css";
 import Dropdown from "./Dropdown";
-
+import Context from "../Store/context";
+import { useContext } from "react";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  const { globalState, globalDispatch } = useContext(Context);
+  
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -53,9 +56,9 @@ const Navbar = () => {
               Rooms
             </Link>
             <Link to="/authpage">
-              <div className="loginbutton">
-                <Login />
-              </div>
+                <div className="loginbutton">
+                  <Login />
+                </div>
             </Link>
           </li>
 
