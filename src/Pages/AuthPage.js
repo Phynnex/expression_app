@@ -6,7 +6,7 @@ import Context from "../Store/context";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
-import { RoomsList } from "../Assets/RoomsList";
+// import { RoomsList } from "../Assets/RoomsList";
 
 
 
@@ -69,12 +69,7 @@ export default function AuthPage(props) {
       .then((response) => response.json())
       .then((data) => {
         globalDispatch({ type: "LOGIN" });
-        const rooms = [];
         const roomTitle = props.match.params.room;
-        const room = RoomsList.find((room) => roomTitle === room.title);
-        console.log("1", globalState);
-        globalDispatch({ type: "ROOM", payload: room });
-        console.log("2", globalState);
         // const rooms = [];
         // const roomTitle = props.match.params.room;
         // const roomArray = rooms.filter((r) => r.title === roomTitle);

@@ -11,7 +11,6 @@ const SinglePage = (props) => {
   const { globalDispatch } = useContext(Context);
   
   useEffect(() => {
-    
     const title = props.match.params.room;
     const room = RoomsList.find((room) => title === room.title);
     globalDispatch({ type: "ROOM", payload: room });
